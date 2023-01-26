@@ -105,13 +105,13 @@ stages:
                 appName: $(WebAppName)
                 resourceGroupName: $(ResourceGroupName)
                 appSettings: |
-                [
+                  [
                     {
-                    "name": "AppSettings__LeaderboardFunctionUrl",
-                    "value": "http://$(LeaderboardAppName).azurewebsites.net/api/LeaderboardFunction",
-                    "slotSetting": false
+                      "name": "AppSettings__LeaderboardFunctionUrl",
+                      "value": "http://$(LeaderboardAppName).azurewebsites.net/api/LeaderboardFunction",
+                      "slotSetting": false
                     }
-                ]
+                  ]
                    
           - task: AzureAppServiceSettings@1
             displayName: 'Update web app settings'
